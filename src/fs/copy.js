@@ -17,7 +17,6 @@ const copy = async () => {
     }
     await fs.cp(sourcePath, destinationPath, { recursive: true });
   } catch (error) {
-
     if (error.code === "ENOENT" || error.message === "FS operation failed") {
       throw new Error("FS operation failed");
     }
